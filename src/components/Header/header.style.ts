@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { BackColors, ButtonColors } from "@/common/colors";
+import Link from "next/link";
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
 
-  background-color: ${BackColors.Orange};
+  background-color: ${BackColors.MainBack};
 
   height: 10vh;
 `;
@@ -21,9 +22,12 @@ export const Header = styled.header`
 `;
 
 /* Title, css in js */
-export const Title = styled.div`
+export const Title = styled(Link)`
   font-family: "Margarine", cursive;
   font-size: 2.5rem;
+
+  color: white;
+  text-decoration: none;
 
   cursor: pointer;
 `;

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { BackColors } from "@/common/colors";
 
 export const Bg = styled.div`
-  background-color: ${BackColors.Orange};
+  background-color: ${BackColors.MainBack};
 `;
 
 export const Container = styled.div`

@@ -1,5 +1,6 @@
 export const BackColors = {
-  Orange: "#FCA311",
+  MainBack: "#FCA311",
+  SearchBack: "#F8F8F8",
 };
 
 export const ButtonColors = {
