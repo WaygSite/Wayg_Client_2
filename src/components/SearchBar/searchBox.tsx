@@ -1,14 +1,18 @@
-import * as S from "./searchBox.style";
 import { useSchoolQuery } from "@/utils";
 import { useEffect, useState } from "react";
+import { SearchView } from "./searchBox.view";
+
+import { useRecoilState } from "recoil";
+import { data } from "@/recoil/data";
 
 export const SearchBox = () => {
-  const [name, setName] = useState<any>("");
+  const [schoolData, setSchoolData] = useRecoilState(data);
+  const [name, setName] = useState<string>("");
   const [page, setPage] = useState<number>(1);
   const { useSchoolInfoQuery } = useSchoolQuery();
   const [debouncedName, setDebouncedName] = useState<string>("");
 
-  const findSchool = (e: any) => {
+  const findSchool = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
 
@@ -26,13 +30,10 @@ export const SearchBox = () => {
 
   useEffect(() => {
     if (schoolInfoQuery.data?.content) {
-      console.log(schoolInfoQuery.data?.content);
+      setSchoolData(schoolInfoQuery);
+      console.log(schoolInfoQuery.data);
     }
   }, [schoolInfoQuery.data?.content]);
 
-  return (
-    <S.Search>
-      <S.Box onChange={findSchool} placeholder="보고싶은 학교를 검색해보세요" />
-    </S.Search>
-  );
+  return <SearchView findSchool={findSchool} />;
 };
