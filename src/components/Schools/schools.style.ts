@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BackColors } from "@/common/colors";
 
 export const Container = styled.div`
   display: flex;
