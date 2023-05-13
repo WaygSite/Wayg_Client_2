@@ -1,16 +1,22 @@
-import styled from "styled-components";
-import { BackColors } from "@/common/colors";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
 `;
-export const Grid = styled.div`
+export const Grid = styled.div<{ num: number }>`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
   width: 85%;
   row-gap: 4rem;
+
+  ${({ num }) =>
+    num <= 4
+      ? css`
+          height: 100vh;
+        `
+      : null}
 `;
 
 export const Card = styled.div`

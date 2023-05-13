@@ -9,16 +9,14 @@ import styled from "styled-components";
 export default function SearchPage() {
   return (
     <Bg>
-      <div>
-        <Header />
-        <SearchBox />
-        <Schools />
-      </div>
+      <Header />
+      <SearchBox />
+      <Schools />
     </Bg>
   );
 }
 
 const Bg = styled.div`
   background-color: ${BackColors.SearchBack};
-  height: 100vh;
+  height: 100%;
 `;

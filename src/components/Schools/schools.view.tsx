@@ -1,9 +1,10 @@
 import * as S from "./schools.style";
 
-export const SchoolsView = ({ data }: any) => {
+export const SchoolsView = ({ data, num }: any) => {
+  console.log(num);
   return (
     <S.Container>
-      <S.Grid>
+      <S.Grid num={num}>
         {data.data?.content.map((e: any) => (
           <S.Card>
             <S.SchoolLogo>

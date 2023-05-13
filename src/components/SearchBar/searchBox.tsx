@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { SearchView } from "./searchBox.view";
 
 import { useRecoilState } from "recoil";
-import { data } from "@/recoil/data";
+import { data, dataNum } from "@/recoil/data";
 
 export const SearchBox = () => {
   const [schoolData, setSchoolData] = useRecoilState(data);
+  const [num, setNum] = useRecoilState(dataNum);
   const [name, setName] = useState<string>("");
   const [page, setPage] = useState<number>(1);
   const { useSchoolInfoQuery } = useSchoolQuery();
@@ -31,9 +32,9 @@ export const SearchBox = () => {
   useEffect(() => {
     if (schoolInfoQuery.data?.content) {
       setSchoolData(schoolInfoQuery);
-      console.log(schoolInfoQuery.data);
+      setNum(schoolInfoQuery.data.content.length);
     }
-  }, [schoolInfoQuery.data?.content]);
+  }, [schoolInfoQuery.data?.content, schoolInfoQuery.data?.content.length]);
 
   return <SearchView findSchool={findSchool} />;
 };
