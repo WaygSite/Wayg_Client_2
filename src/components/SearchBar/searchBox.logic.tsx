@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { SearchView } from "./searchBox.view";
 
 import { useRecoilState } from "recoil";
-import { data, dataNum } from "@/recoil/data";
+import { data, dataNum, pageNum } from "@/recoil/data";
 import { useRecoilValue } from "recoil";
 import { searchOpen } from "@/recoil/state";
 
@@ -13,10 +13,10 @@ import { Width } from "@/hooks/windowWidth";
 export const SearchBox = () => {
   const [schoolData, setSchoolData] = useRecoilState(data);
   const [num, setNum] = useRecoilState(dataNum);
+  const page = useRecoilValue(pageNum);
   const open = useRecoilValue(searchOpen);
 
   const [name, setName] = useState<string>("");
-  const [page, setPage] = useState<number>(1);
   const [debouncedName, setDebouncedName] = useState<string>("");
   const [searchBar, setSearchBar] = useState(true);
 

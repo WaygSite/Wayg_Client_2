@@ -33,6 +33,22 @@ export const PageBtn = styled.button<{ active: boolean }>`
       : null}
 `;
 
+export const First = styled.button`
+  font-size: 1rem;
+  font-weight: 600;
+  color: ${FontColors.number};
+
+  background-color: white;
+  cursor: pointer;
+
+  background-color: white;
+
+  border: 0;
+
+  width: 4rem;
+  height: 3rem;
+`;
+
 export const Before = styled.button`
   font-size: 1rem;
   font-weight: 600;
@@ -62,5 +78,21 @@ export const Next = styled.button`
   border: 0;
 
   width: 3rem;
+  height: 3rem;
+`;
+
+export const Last = styled.button`
+  font-size: 1rem;
+  font-weight: 600;
+  color: ${FontColors.number};
+
+  background-color: white;
+  cursor: pointer;
+
+  background-color: white;
+
+  border: 0;
+
+  width: 4rem;
   height: 3rem;
 `;

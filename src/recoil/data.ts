@@ -5,7 +5,12 @@ export const data = atom<any>({
   default: "",
 });
 
-export const dataNum = atom<any>({
+export const dataNum = atom<number>({
   key: "dataNum",
   default: 0,
+});
+
+export const pageNum = atom<number>({
+  key: "pageNum",
+  default: 1,
 });
