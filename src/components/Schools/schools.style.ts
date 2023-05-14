@@ -3,6 +3,8 @@ import styled, { css } from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+
+  height: 100%;
 `;
 export const Grid = styled.div<{ num: number }>`
   display: grid;
@@ -11,12 +13,11 @@ export const Grid = styled.div<{ num: number }>`
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 
   width: 85%;
-  row-gap: 4rem;
 
   ${({ num }) =>
-    num <= 4
+    num === 0
       ? css`
-          height: 100vh;
+          height: 21.7vh;
         `
       : null}
 
@@ -39,6 +40,8 @@ export const Card = styled.div`
   background-color: white;
 
   cursor: pointer;
+
+  margin-bottom: 4.8rem;
 
   transition: all 0.2s;
   :hover {
