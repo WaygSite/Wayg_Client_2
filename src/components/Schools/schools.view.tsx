@@ -1,7 +1,6 @@
 import * as S from "./schools.style";
 
 export const SchoolsView = ({ data, num }: any) => {
-  // console.log(num);
   return (
     <>
       {num === 0 ? (

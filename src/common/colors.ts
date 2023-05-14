@@ -6,3 +6,7 @@ export const BackColors = {
 export const ButtonColors = {
   Navy: "#14213D",
 };
+
+export const FontColors = {
+  number: "#A9A9A9",
+};

@@ -41,7 +41,7 @@ export const Card = styled.div`
 
   cursor: pointer;
 
-  margin-bottom: 4.8rem;
+  margin-bottom: 2rem;
 
   transition: all 0.2s;
   :hover {

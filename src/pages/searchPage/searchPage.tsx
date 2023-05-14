@@ -6,6 +6,7 @@ import { BackColors } from "@/common/colors";
 
 import styled from "styled-components";
 import { Category } from "@/components/Category/category.logic";
+import { PageNation } from "@/components/PageNation/pageNation.logic";
 
 export default function SearchPage() {
   return (
@@ -14,6 +15,7 @@ export default function SearchPage() {
       <SearchBox />
       <Category />
       <Schools />
+      <PageNation />
     </Bg>
   );
 }
