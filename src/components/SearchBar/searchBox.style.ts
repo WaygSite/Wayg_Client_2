@@ -1,6 +1,4 @@
-import styled from "styled-components";
-import { BackColors } from "@/common/colors";
-import Image from "next/image";
+import styled, { css } from "styled-components";
 
 export const Search = styled.div`
   display: flex;
@@ -8,6 +6,16 @@ export const Search = styled.div`
   align-items: center;
 
   height: 20vh;
+`;
+
+export const Box_V2 = styled.div<{ open: boolean }>`
+  transition: all ease 1s 0.2s;
+  ${({ open }) =>
+    open
+      ? css`
+          transform: translateX(10rem);
+        `
+      : null}
 `;
 
 export const Box = styled.input`
@@ -27,29 +35,4 @@ export const Box = styled.input`
   @media screen and (max-width: 700px) {
     display: none;
   }
-`;
-
-export const Box_V2 = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 4.5rem;
-  height: 4.5rem;
-
-  background-color: white;
-
-  cursor: pointer;
-
-  border: 1px solid ${BackColors.MainBack};
-  border-radius: 50px;
-
-  @media screen and (min-width: 700px) {
-    display: none;
-  }
-`;
-
-export const MagnifierImg = styled(Image)`
-  width: 2rem;
-  height: auto;
 `;

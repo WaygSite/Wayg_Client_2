@@ -7,6 +7,7 @@ export const Container = styled.div`
 export const Grid = styled.div<{ num: number }>`
   display: grid;
   justify-items: center;
+
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 
   width: 85%;
@@ -74,4 +75,19 @@ export const SubIntro = styled.ul`
 
   margin: 10px;
   height: 6rem;
+`;
+
+// 찾는 학교가 없을 경우의 문구 css in js
+export const Phrase = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 40vh;
+`;
+
+export const Text = styled.p`
+  color: gray;
+  font-size: 2rem;
+  font-weight: 600;
 `;

@@ -5,12 +5,15 @@ import { SearchView } from "./searchBox.view";
 
 import { useRecoilState } from "recoil";
 import { data, dataNum } from "@/recoil/data";
+import { useRecoilValue } from "recoil";
+import { searchOpen } from "@/recoil/state";
 
 import { Width } from "@/hooks/windowWidth";
 
 export const SearchBox = () => {
   const [schoolData, setSchoolData] = useRecoilState(data);
   const [num, setNum] = useRecoilState(dataNum);
+  const open = useRecoilValue(searchOpen);
 
   const [name, setName] = useState<string>("");
   const [page, setPage] = useState<number>(1);
@@ -47,5 +50,5 @@ export const SearchBox = () => {
     }
   }, [schoolInfoQuery.data?.content, schoolInfoQuery.data?.content.length]);
 
-  return <SearchView findSchool={findSchool} bar={searchBar} />;
+  return <SearchView findSchool={findSchool} bar={searchBar} open={open} />;
 };
