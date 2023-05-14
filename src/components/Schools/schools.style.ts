@@ -6,7 +6,8 @@ export const Container = styled.div`
 `;
 export const Grid = styled.div<{ num: number }>`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 
   width: 85%;
   row-gap: 4rem;
@@ -17,6 +18,14 @@ export const Grid = styled.div<{ num: number }>`
           height: 100vh;
         `
       : null}
+
+  @media screen and (max-width: 1128px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 80%;
+  }
 `;
 
 export const Card = styled.div`

@@ -1,16 +1,18 @@
 import { Header } from "@/components/Header/header";
-import { SearchBox } from "@/components/SearchBar/searchBox";
-import { Schools } from "@/components/Schools/schools";
+import { SearchBox } from "@/components/SearchBar/searchBox.logic";
+import { Schools } from "@/components/Schools/schools.logic";
 
 import { BackColors } from "@/common/colors";
 
 import styled from "styled-components";
+import { Category } from "@/components/Category/category.logic";
 
 export default function SearchPage() {
   return (
     <Bg>
       <Header />
       <SearchBox />
+      <Category />
       <Schools />
     </Bg>
   );
@@ -18,5 +20,4 @@ export default function SearchPage() {
 
 const Bg = styled.div`
   background-color: ${BackColors.SearchBack};
-  height: 100%;
 `;

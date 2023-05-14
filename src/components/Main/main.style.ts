@@ -10,11 +10,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media screen and (min-height: 800px) {
+  @media screen and (max-width: 1500px) {
     display: none;
   }
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-height: 800px) {
     display: none;
   }
 `;
