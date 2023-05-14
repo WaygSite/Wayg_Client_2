@@ -24,7 +24,7 @@ export const Box_V2 = styled.button`
     background-color: lightgray;
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 960px) {
     display: none;
   }
 `;

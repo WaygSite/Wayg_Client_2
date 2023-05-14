@@ -41,7 +41,7 @@ export const SearchBox = () => {
   const schoolInfoQuery = useSchoolInfoQuery(page, debouncedName);
 
   useEffect(() => {
-    if (windowWidth <= 700) {
+    if (windowWidth <= 900) {
       setSearchBar(false);
     }
     if (schoolInfoQuery.data?.content) {

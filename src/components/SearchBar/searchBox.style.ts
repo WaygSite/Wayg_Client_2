@@ -32,7 +32,7 @@ export const Box = styled.input`
   width: 40rem;
   height: 3.5rem;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 960px) {
     display: none;
   }
 `;

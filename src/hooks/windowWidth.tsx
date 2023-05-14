@@ -23,7 +23,7 @@ export const Width = () => {
   }, [windowWidth]);
 
   useEffect(() => {
-    console.log(windowWidth);
+    // console.log(windowWidth);
   }, [windowWidth]);
 
   return { windowWidth };

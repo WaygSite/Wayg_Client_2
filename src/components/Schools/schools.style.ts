@@ -25,7 +25,7 @@ export const Grid = styled.div<{ num: number }>`
   }
 
   @media screen and (max-width: 960px) {
-    width: 80%;
+    width: 70%;
   }
 `;
 

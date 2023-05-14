@@ -8,6 +8,7 @@ interface SearchViewProps {
 }
 
 export const SearchView = ({ findSchool, bar, open }: SearchViewProps) => {
+  console.log(bar);
   return (
     <S.Search>
       <S.Box onChange={findSchool} placeholder="보고싶은 학교를 검색해보세요" />
