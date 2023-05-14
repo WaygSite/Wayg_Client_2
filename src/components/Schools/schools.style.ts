@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 export const Grid = styled.div<{ num: number }>`
   display: grid;
-  place-items: center;
+  justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 
   width: 85%;
