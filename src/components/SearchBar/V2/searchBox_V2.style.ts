@@ -8,28 +8,29 @@ export const openTransBorder = keyframes`
       border-radius: 50px;
       border: 1px solid ${BackColors.MainBack};
     }  
-    to{
+    to {
       padding-right: 10px;
-      width: 35rem;
+      width: 80vw;
       border-radius: 0px 15px 15px 0px;
     }
 `;
 
 export const closeTransBorder = keyframes`
-from{
-  width: 40rem;
-  border-radius: 0px 15px 15px 0px;
-      
-} 
-to {
-  width: 3.5rem;
-  border-radius: 50px;
-}
+    from{
+      width: 40rem;
+      border-radius: 0px 15px 15px 0px;   
+    } 
+    to {
+      width: 3.5rem;
+      border-radius: 50px;
+    }
 `;
+
 export const Box_V2 = styled.button<{ open: boolean }>`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
   width: 3.5rem;
   height: 3.5rem;
 
@@ -62,6 +63,7 @@ export const Box_V2 = styled.button<{ open: boolean }>`
 
 export const MagnifierImg = styled(Image)`
   width: 1.3rem;
-  margin: 10px;
   height: auto;
+
+  margin: 10px;
 `;

@@ -5,19 +5,9 @@ import * as S from "./pageNation.style";
 import { useRecoilState } from "recoil";
 import { pageNum } from "@/recoil/data";
 
-export const PageNationView = ({
-  start,
-  end,
-  pageNumbers,
-  page,
-  setPage,
-}: any) => {
+export const PageNationView = ({ pageNumbers, page, setPage }: any) => {
   const [number, setNumber] = useRecoilState(pageNum);
 
-  useEffect(() => {
-    console.log(pageNumbers);
-    console.log(page);
-  });
   const ClickBtn = (pageNumber: number) => {
     if (pageNumber === 0) {
       return 1;
@@ -26,9 +16,9 @@ export const PageNationView = ({
     setNumber(pageNumber);
   };
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [page]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
 
   return (
     <S.PageNation>

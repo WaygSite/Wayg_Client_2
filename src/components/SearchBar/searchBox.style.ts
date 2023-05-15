@@ -1,9 +1,11 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Search = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
 
   height: 20vh;
 `;

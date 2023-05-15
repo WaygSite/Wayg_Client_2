@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { PageNationView } from "./pageNation.view";
 
-import { useRecoilValue } from "recoil";
 import { maxPage } from "@/recoil/data";
 
 export const PageNation = () => {

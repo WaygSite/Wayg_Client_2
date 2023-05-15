@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { BackColors } from "@/common/colors";
 
 export const Container = styled.div`
   display: flex;
@@ -42,7 +43,7 @@ export const Button = styled.button`
   margin-bottom: 20px;
 
   :hover {
-    background-color: lightgray;
+    background-color: ${BackColors.SearchBack};
   }
 `;
 

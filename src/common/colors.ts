@@ -9,4 +9,5 @@ export const ButtonColors = {
 
 export const FontColors = {
   number: "#A9A9A9",
+  text: "#787878",
 };
