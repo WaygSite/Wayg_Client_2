@@ -1,6 +1,6 @@
 import * as S from "./main.style";
 
-import Student from "@/assets/png/student.png";
+import Student from "@/assets/png/Student.png";
 import BackGroundCircle from "@/assets/png/BackGroundCircle.png";
 
 import { Header } from "../Header/header";
