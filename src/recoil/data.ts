@@ -14,3 +14,8 @@ export const pageNum = atom<number>({
   key: "pageNum",
   default: 1,
 });
+
+export const maxPage = atom<number>({
+  key: "maxPage",
+  default: 0,
+});

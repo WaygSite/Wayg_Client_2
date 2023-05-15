@@ -8,16 +8,6 @@ export const Search = styled.div`
   height: 20vh;
 `;
 
-export const Box_V2 = styled.div<{ open: boolean }>`
-  transition: all ease 1s 0.2s;
-  ${({ open }) =>
-    open
-      ? css`
-          transform: translateX(10rem);
-        `
-      : null}
-`;
-
 export const Box = styled.input`
   border-radius: 15px;
   border: none;

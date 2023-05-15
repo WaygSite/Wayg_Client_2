@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { SearchView } from "./searchBox.view";
 
 import { useRecoilState } from "recoil";
-import { data, dataNum, pageNum } from "@/recoil/data";
+import { data, dataNum, pageNum, maxPage } from "@/recoil/data";
 import { useRecoilValue } from "recoil";
 import { searchOpen } from "@/recoil/state";
 
@@ -13,6 +13,7 @@ import { Width } from "@/hooks/windowWidth";
 export const SearchBox = () => {
   const [schoolData, setSchoolData] = useRecoilState(data);
   const [num, setNum] = useRecoilState(dataNum);
+  const [max, setMax] = useRecoilState(maxPage);
   const page = useRecoilValue(pageNum);
   const open = useRecoilValue(searchOpen);
 
@@ -41,6 +42,9 @@ export const SearchBox = () => {
   const schoolInfoQuery = useSchoolInfoQuery(page, debouncedName);
 
   useEffect(() => {
+    if (schoolInfoQuery.data?.totalPages) {
+      setMax(schoolInfoQuery.data?.totalPages);
+    }
     if (windowWidth <= 900) {
       setSearchBar(false);
     }

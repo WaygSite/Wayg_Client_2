@@ -1,35 +1,40 @@
 import { useEffect, useState } from "react";
 
-import { pageNum } from "@/recoil/data";
 import * as S from "./pageNation.style";
+
 import { useRecoilState } from "recoil";
+import { pageNum } from "@/recoil/data";
 
-export const PageNationView = () => {
+export const PageNationView = ({
+  start,
+  end,
+  pageNumbers,
+  page,
+  setPage,
+}: any) => {
   const [number, setNumber] = useRecoilState(pageNum);
-  const [page, setPage] = useState(1);
-  const [pageNumbers, setPageNumbers] = useState<number[]>([1, 2, 3, 4, 5]);
 
+  useEffect(() => {
+    console.log(pageNumbers);
+    console.log(page);
+  });
   const ClickBtn = (pageNumber: number) => {
     if (pageNumber === 0) {
       return 1;
-    } else if (pageNumber === 6) {
-      //나중에 페이지네이션 알고리즘을 사용하여 할 예정
-      setPageNumbers(pageNumbers.map(e => e + 1));
     }
-
     setPage(pageNumber);
     setNumber(pageNumber);
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [page]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [page]);
 
   return (
     <S.PageNation>
       <S.First>맨 뒤</S.First>
       <S.Before onClick={() => ClickBtn(number - 1)}>뒤</S.Before>
-      {pageNumbers.map(number => (
+      {pageNumbers.map((number: any) => (
         <S.PageBtn
           key={number}
           onClick={() => ClickBtn(number)}

@@ -7,14 +7,14 @@ interface SearchViewProps {
   bar: boolean;
 }
 
-export const SearchView = ({ findSchool, bar, open }: SearchViewProps) => {
+export const SearchView = ({ findSchool, bar }: SearchViewProps) => {
   return (
     <S.Search>
       <S.Box onChange={findSchool} placeholder="보고싶은 학교를 검색해보세요" />
       {bar ? null : (
-        <S.Box_V2 open={open}>
+        <div>
           <SearchBox_V2 />
-        </S.Box_V2>
+        </div>
       )}
     </S.Search>
   );
