@@ -15,6 +15,11 @@ export const pageNum = atom<number>({
   default: 1,
 });
 
+export const showPageNum = atom<number>({
+  key: "showPageNum",
+  default: 1,
+});
+
 export const maxPage = atom<number>({
   key: "maxPage",
   default: 0,

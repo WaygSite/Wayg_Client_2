@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { PageNationView } from "./pageNation.view";
 
-import { maxPage } from "@/recoil/data";
+import { showPageNum } from "@/recoil/data";
+import { useRecoilState } from "recoil";
 
 export const PageNation = () => {
   const max = 12;
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useRecoilState(showPageNum);
   const [startPage, setStartPage] = useState(page - 2 <= 0 ? 1 : page - 2);
   const [endPage, setEndPage] = useState(
     startPage + 4 > max ? max : startPage + 4

@@ -12,8 +12,9 @@ export const PageNationView = ({ pageNumbers, page, setPage }: any) => {
     if (pageNumber === 0) {
       return 1;
     }
-    setPage(pageNumber);
-    setNumber(pageNumber);
+    setPage(pageNumber); //내가 어떤페이지를 눌렀는지 확인 시켜주는 페이지
+    setNumber(pageNumber); //백엔드로 보내는 데이터
+    //검색어를 통해서 schoolInfoQuery의 length가 1이상이면 setPage와 setNumber를 1로 초기화
   };
 
   useEffect(() => {
