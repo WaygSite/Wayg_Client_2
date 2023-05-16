@@ -9,7 +9,7 @@ export default function Home() {
         title="Wayg"
         description="Wayg메인페이지"
         openGraph={{
-          url: `${Site_Url.MAIN}`,
+          url: `${Site_Url.MAIN_CLIENT}`,
         }}
       />
       <Main />
