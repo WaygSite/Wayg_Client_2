@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <S.Container>
       <S.Header>
-        <S.Title href={`${Site_Url.MAIN}`}>Wayg</S.Title>
+        <S.Title href={`${Site_Url.MAIN_SERVER}`}>Wayg</S.Title>
         <S.Join>
           <S.SignIn onClick={() => alert("아직 생각 안했다.")}>
             Sign in

@@ -1,4 +1,5 @@
 export const Site_Url = {
-  MAIN: "http://localhost:3000/",
+  MAIN_CLIENT: "/",
+  MAIN_SERVER: "https://master--marvelous-bunny-79d406.netlify.app/",
   SEARCH: "searchPage/searchPage",
 };
