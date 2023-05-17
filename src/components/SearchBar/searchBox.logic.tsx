@@ -15,7 +15,7 @@ export const SearchBox = () => {
   const [schoolData, setSchoolData] = useRecoilState(data);
   const [num, setNum] = useRecoilState(dataNum);
   const [max, setMax] = useRecoilState(maxPage);
-  const page = useRecoilValue(pageNum);
+  const [page, setPage] = useRecoilState(pageNum);
   const open = useRecoilValue(searchOpen);
 
   const [name, setName] = useState<string>("");
@@ -45,6 +45,7 @@ export const SearchBox = () => {
   useEffect(() => {
     if (name != "") {
       setShowPage(1);
+      setPage(1);
       console.log(schoolInfoQuery.data?.content.length);
     }
     if (schoolInfoQuery.data?.totalPages) {
