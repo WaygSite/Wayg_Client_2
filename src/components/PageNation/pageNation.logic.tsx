@@ -17,9 +17,11 @@ export const PageNation = () => {
 
   return (
     <PageNationView
+      max={max}
       start={startPage}
       end={endPage}
       pageNumbers={pageNumbers}
+      setPageNumbers={setPageNumbers}
       page={page}
       setPage={setPage}
     />

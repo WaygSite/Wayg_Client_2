@@ -7,9 +7,16 @@ export default function Home() {
     <>
       <NextSeo
         title="Wayg"
-        description="Wayg메인페이지"
+        description="부산시의 고등학교 진학을 도와주는 Wayg!"
         openGraph={{
           url: `${Site_Url.MAIN_CLIENT}`,
+          images: [
+            {
+              url: "https://ifh.cc/g/dl2tno.jpg",
+              width: 800,
+              height: 400,
+            },
+          ],
         }}
       />
       <Main />
