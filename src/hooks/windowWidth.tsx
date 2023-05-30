@@ -22,9 +22,7 @@ export const Width = () => {
     };
   }, [windowWidth]);
 
-  useEffect(() => {
-    // console.log(windowWidth);
-  }, [windowWidth]);
+  useEffect(() => {}, [windowWidth]);
 
   return { windowWidth };
 };

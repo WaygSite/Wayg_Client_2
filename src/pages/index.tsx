@@ -1,6 +1,6 @@
 import { Main } from "../components/Main/main";
 import { NextSeo } from "next-seo";
-import { Site_Url } from "@/utils/url/url";
+import { Site_Url, Share_Img_Url } from "@/utils/url/url";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           url: `${Site_Url.MAIN_CLIENT}`,
           images: [
             {
-              url: "https://ifh.cc/g/dl2tno.jpg",
+              url: `${Share_Img_Url.MAIN_IMG}`,
               width: 800,
               height: 400,
             },

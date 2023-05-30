@@ -39,13 +39,15 @@ export const Card = styled.div`
 
   background-color: white;
 
+  box-shadow: 5px 5px 20px lightgray;
+
   cursor: pointer;
 
   margin-bottom: 2rem;
 
   transition: all 0.2s;
   :hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
     box-shadow: 5px 5px 5px 5px #d9d9d9;
   }
 `;

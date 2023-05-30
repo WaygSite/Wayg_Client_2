@@ -13,13 +13,6 @@ import { Site_Url } from "@/utils/url/url";
 export default function SearchPage() {
   return (
     <>
-      <NextSeo
-        title="Wayg"
-        description="학교검색페이지"
-        openGraph={{
-          url: `${Site_Url.SEARCH}`,
-        }}
-      />
       <Bg>
         <Header />
         <SearchBox />

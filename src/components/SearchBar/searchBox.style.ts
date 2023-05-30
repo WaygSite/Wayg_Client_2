@@ -21,10 +21,10 @@ export const Box = styled.input`
 
   font-size: 1rem;
 
-  width: 40rem;
-  height: 3.5rem;
+  width: 50vw;
+  height: 4vw;
 
   @media screen and (max-width: 960px) {
-    display: none;
+    width: 70vw;
   }
 `;
