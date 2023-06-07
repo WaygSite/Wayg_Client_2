@@ -17,6 +17,8 @@ export const PageNationView = ({
   const ClickBtn = (pageNumber: number) => {
     if (pageNumber === 0) {
       return 1;
+    } else if (pageNumber > max) {
+      return 1;
     }
     setPage(pageNumber); //내가 어떤페이지를 눌렀는지 확인 시켜주는 페이지
     setNumber(pageNumber); //백엔드로 보내는 데이터

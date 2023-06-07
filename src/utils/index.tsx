@@ -5,7 +5,11 @@ export const useSchoolQuery = () => {
   const useSchoolInfoQuery = (pageNumber: number, schoolName: string) => {
     const SchoolInfoQuery = useQuery(
       ["SearchSchool", pageNumber, schoolName],
-      () => SearchSchool({ pageNumber, schoolName })
+      () =>
+        SearchSchool({
+          pageNumber,
+          schoolName,
+        })
     );
     return SchoolInfoQuery;
   };

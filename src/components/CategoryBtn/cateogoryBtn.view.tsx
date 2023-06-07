@@ -1,12 +1,16 @@
-import * as S from "./category.style";
+import * as S from "./categoryBtn.style";
 
 import Category from "@/assets/png/Category.png";
 
-export const CategoryView = () => {
+interface CategoryViewType {
+  OnOff: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+}
+
+export const CategoryBtnView = ({ OnOff }: CategoryViewType) => {
   return (
     <S.Container>
       <S.Category>
-        <S.Button>
+        <S.Button onClick={OnOff}>
           <S.Size>
             <S.CateImg src={Category} alt="category" />
             카테고리

@@ -1,6 +1,11 @@
+import { useRecoilValue } from "recoil";
 import * as S from "./schools.style";
+import { modalStatus } from "@/recoil/state";
+import { Category_V1 } from "../Modal/Category/V1/category_V1.logic";
 
 export const SchoolsView = ({ data, num }: any) => {
+  const category = useRecoilValue(modalStatus);
+
   return (
     <>
       {num === 0 ? (
@@ -9,6 +14,7 @@ export const SchoolsView = ({ data, num }: any) => {
         </S.Phrase>
       ) : null}
       <S.Container>
+        {category === "카테고리" ? <Category_V1 /> : null}
         <S.Grid num={num}>
           {data.data?.content.map((e: any) => (
             <S.Card>

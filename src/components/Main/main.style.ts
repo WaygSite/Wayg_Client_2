@@ -6,25 +6,12 @@ export const Bg = styled.div`
   background-color: ${BackColors.MainBack};
 `;
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: flex-end;
-
-  @media screen and (max-width: 1500px) {
-    display: none;
-  }
-
-  @media screen and (min-height: 800px) {
-    display: none;
-  }
-`;
-
 export const Main = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  z-index: -1;
+  z-index: 1;
 `;
 
 /* Right css in js */
@@ -33,16 +20,16 @@ export const Right = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  z-index: 1;
+  z-index: 2;
 
   height: 50vh;
 `;
 
 export const Title = styled.p`
-  font-size: 6rem;
+  font-size: 6vw;
   font-family: "Inter", sans-serif;
 
-  margin-bottom: 2rem;
+  margin-bottom: 2vw;
 `;
 
 export const Sub = styled.p`
@@ -51,7 +38,7 @@ export const Sub = styled.p`
 
   color: #14213d;
 
-  margin-bottom: 3rem;
+  margin-bottom: 3vw;
 `;
 
 /* Left css in js */
@@ -67,17 +54,28 @@ export const Left = styled.div`
 export const CircleImg = styled(Image)`
   position: fixed;
 
-  width: 78rem;
-  height: 46rem;
+  right: 0;
+  width: 75vw;
+  height: 90vh;
 
-  z-index: 1;
+  z-index: -1;
+
+  @media screen and (max-width: 1024px) {
+    width: 85vw;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const StudentImg = styled(Image)`
-  width: 25rem;
-  height: auto;
+  width: 25vw;
+  height: 90vh;
 
-  @media screen and (max-width: 1000px) {
-    display: none;
+  @media screen and (max-width: 1024px) {
+    width: 35vw;
+    height: 80vh;
   }
 `;

@@ -11,5 +11,6 @@ export const SearchSchool = async ({ pageNumber, schoolName }: searchType) => {
     page: pageNumber,
     keyword: schoolName,
   });
+  console.log(query);
   return (await server.get(`/wayg/school/category?${query}`)).data;
 };

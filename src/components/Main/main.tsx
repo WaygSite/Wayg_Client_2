@@ -11,9 +11,6 @@ export const Main = () => {
   return (
     <S.Bg>
       <Header />
-      <S.Container>
-        <S.CircleImg src={BackGroundCircle} alt="cirle" />
-      </S.Container>
       <S.Main>
         <S.Right>
           <div>
@@ -24,6 +21,8 @@ export const Main = () => {
           <SearchBtn />
         </S.Right>
         <S.Left>
+          <S.CircleImg src={BackGroundCircle} alt="cirle" />
+
           <S.StudentImg src={Student} alt="studentImg" />
         </S.Left>
       </S.Main>
